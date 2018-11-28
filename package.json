@@ -1,0 +1,97 @@
+{
+  "name": "react-redux-autoform",
+  "version": "0.1.0",
+  "description": "React redux autoform",
+  "repository": "github:go-aos/react-redux-autoform",
+  "bugs": "https://github.com/go-aos/react-redux-autoform/issues",
+  "main": "lib/react-redux-autoform.js",
+  "module": "es/react-redux-autoform.js",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "src"
+  ],
+  "scripts": {
+    "build:commonjs": "cross-env NODE_ENV=cjs rollup -c -o lib/react-redux-autoform.js",
+    "build:es": "cross-env BABEL_ENV=es NODE_ENV=es rollup -c -o es/react-redux-autoform.js",
+    "build:umd": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -o dist/react-redux-autoform.js",
+    "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -o dist/react-redux-autoform.min.js",
+    "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
+    "clean": "rimraf lib dist es",
+    "cosmos": "cosmos --config .cosmos/cosmos.config.js",
+    "cosmos:export": "cosmos-export --config .cosmos/cosmos.config.js",
+    "lint": "BABEL_ENV=es NODE_ENV=development jest",
+    "prepare": "npm run clean && npm test && npm run build",
+    "test": "cross-env BABEL_ENV=commonjs jest",
+    "test:watch": "npm test -- --watch"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "form",
+    "autoform"
+  ],
+  "authors": [
+    "Stephane Barale <stephane.barale@go-aos.io> (https://github.com/C0r3y8)",
+    "AOS"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-external-helpers": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-react-display-name": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-react-require": "^3.0.1",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
+    "jest-runner-eslint": "^0.7.1",
+    "react": "^16.6.3",
+    "react-cosmos": "^4.6.4",
+    "react-cosmos-context-proxy": "^4.6.1",
+    "react-cosmos-redux-proxy": "^4.6.1",
+    "react-dom": "^16.6.3",
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-form": "^7.4.2",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.67.3",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-uglify": "^6.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.26.0"
+  },
+  "peerDependencies": {
+    "redux-form": "^7.4.2"
+  },
+  "npmName": "react-redux-autoform",
+  "npmFileMap": [
+    {
+      "basePath": "/dist/",
+      "files": [
+        "*.js"
+      ]
+    }
+  ]
+}

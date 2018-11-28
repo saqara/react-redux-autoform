@@ -1,0 +1,35 @@
+{
+  "autoimport.filesToScan": "imports/**/*.{js,jsx}",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "autoimport.useSemiColon": false,
+  "css.validate": false,
+  "editor.rulers": [100],
+  "eslint.enable": true,
+  "eslint.options": { "cache": true },
+  "eslint.workingDirectories": [".cosmos", "src"],
+  "files.exclude": {
+    ".git/objects/**": true,
+    ".git/subtree-cache/**": true,
+    ".DS_Store": true,
+    ".tmp": true
+  },
+  "files.watcherExclude": {
+    ".git/objects/**": true,
+    ".git/subtree-cache/**": true,
+    "**/.DS_Store": true,
+    "node_modules": true,
+    ".tmp": true,
+    "**/*.snap": true
+  },
+  "javascript.referencesCodeLens.enabled": true,
+  "jest.pathToConfig": "./jest-standard.config.js",
+  "scss.validate": false,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.tmp": true,
+    "**/*.snap": true
+  },
+  "search.useIgnoreFiles": true,
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false
+}
