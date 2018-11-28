@@ -6,7 +6,10 @@ import {
 } from './constants/entities'
 import {
   ArrayField,
-  InputField
+  CheckboxField,
+  FieldsField,
+  InputField,
+  SelectField
 } from './fieldComponents'
 import {
   autoFormShape,
@@ -27,9 +30,12 @@ export {
   Action,
   ArrayField,
   AutoForm,
+  CheckboxField,
   Field,
+  FieldsField,
   Group,
   InputField,
+  SelectField,
   autoFormShape,
   componentType,
   entitiesShape,
